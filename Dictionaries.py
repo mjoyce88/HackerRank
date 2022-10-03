@@ -1,11 +1,11 @@
-n = 0
-n = int(input())
-d = dict(input().split() for x in range(n))
-for i in range(n):
-    c = input()
-    t = d.get(c)
-
-    if t == None:
-        print("Not found")
-    else:
-        print(c + "=" + t)
+tp, name, phone = dict(), str(), ""
+for i in range(int(input())):
+    name, phone = input().split()
+    tp[name]=phone
+while(True):
+    try:
+        name = input()
+        if name in tp: print(name+"="+tp[name])
+        else: print("Not found")
+    except EOFError:
+        break;
