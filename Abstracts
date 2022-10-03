@@ -1,0 +1,9 @@
+class MyBook(Book):
+    def __init__(self, title, author, price):
+        super().__init__(title, author)
+        self.price = price
+    
+    def display(bored_from_self):
+        print("Title:", bored_from_self.title)
+        print("Author:", bored_from_self.author)
+        print("Price:", bored_from_self.price)
